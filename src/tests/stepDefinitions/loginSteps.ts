@@ -21,7 +21,7 @@ Before(async function () {
   this.apiContext = requestContext;
 });
 
-
+//Switch Case to Select User Credentials
 Given('I have {string} user credentials', async function (credentials: string) {
 switch(credentials) {
 case 'valid':
@@ -47,6 +47,7 @@ case 'invalid email':
     break;
 }});
 
+//Step for Login
 When('I send a login request to the Reqres public API', async function () {
   const { status, data, raw } = await performLogin(this.apiContext, this.credentials);
   // Store response in custom world
@@ -69,7 +70,7 @@ export async function performLogin(
     // Detect HTML error page
     const isHtml = raw.trim().startsWith('<!DOCTYPE html') || raw.trim().startsWith('<html');
     if (isHtml) {
-      console.error('❌ Received HTML instead of JSON:', raw);
+      console.error('Received HTML instead of JSON:', raw);
       throw new Error('Received HTML instead of JSON');
     }
 
@@ -77,7 +78,7 @@ export async function performLogin(
       const data = JSON.parse(raw);
       return { status: response.status(), data, raw };
     } catch (err) {
-      console.error('❌ Failed to parse response:', raw);
+      console.error('Failed to parse response:', raw);
       throw new Error('Failed to parse JSON');
     }
   }, 3, 500); // 3 retries with 500ms delay
@@ -89,7 +90,7 @@ export async function performLogin(
   raw: string
 ): { token?: string; error?: string } {
   if (!data) {
-    console.error('❌ Response body is not valid JSON:', raw);
+    console.error('Response body is not valid JSON:', raw);
     return { error: 'Invalid JSON response' };
   }
 
