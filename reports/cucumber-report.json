@@ -1,0 +1,368 @@
+[
+  {
+    "description": "Simulated user login and post-login verification of user details",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;successful-user-login-api-call-with-valid-credentials-and-post-login-retrieval-and-verification",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Successful user login API call with Valid credentials and post-login retrieval and verification",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16483000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I have \"valid\" user credentials",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 681400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I send a login request to the Reqres public API",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 476563199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should receive a token",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 195300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I make an API call to retrieve the user profile from Reqres",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84435300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the user's name and email should be correct",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:135"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3127200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;unsuccessful-user-login-api-call-with-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Unsuccessful user login API call with Invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 997900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I have \"invalid\" user credentials",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 181300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I send a login request to the Reqres public API",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 357822999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should receive an error message",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 219900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;unsuccessful-user-login-api-call-with-missing-credentials",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Unsuccessful user login API call with missing credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2196499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I have \"missing\" user credentials",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I send a login request to the Reqres public API",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 340409499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should receive an error message",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;unsuccessful-user-login-api-call-with-missing-password",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Unsuccessful user login API call with missing password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1190200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I have \"missing Password\" user credentials",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I send a login request to the Reqres public API",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 409868299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should receive an error message",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;unsuccessful-user-login-api-call-with-missing-email",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Unsuccessful user login API call with missing email",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1949499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "I have \"missing email\" user credentials",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 195600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I send a login request to the Reqres public API",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 346094699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "I should receive an error message",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 47,
+            "name": "I have \"invalid email\" user credentials",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "I send a login request to the Reqres public API",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 348134399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "I should receive an error message",
+            "match": {
+              "location": "src\\tests\\stepDefinitions\\loginSteps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "src\\tests\\features\\login.feature"
+  }
+]
